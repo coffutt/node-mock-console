@@ -1,0 +1,28 @@
+{
+  "name": "mock-console",
+  "version": "0.0.0",
+  "private": true,
+  "main": "lib/mock-console.js",
+  "description": "Node module for mocking the process.stdout variable.",
+  "homepage": "https://github.com/craig-o/mock-console",
+  "bugs": "https://github.com/craig-o/mock-console/issues",
+  "author": {
+    "name": "Craig Offutt",
+    "email": "craigoffutt@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craig-o/mock-console"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "keywords": [],
+  "devDependencies": {
+    "jshint": "^2.5.11",
+    "auto-istanbul": "0.0.3",
+    "mocha": "^2.1.0",
+    "chai": "^1.10.0"
+  }
+}
