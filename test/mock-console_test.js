@@ -29,6 +29,22 @@ describe('mock-console tests', function () {
         expect(actual).to.equal(goodLines.join('\n'));
     });
 
+    it('should clear the current line', function () {
+        goodLines.forEach(process.stdout.write);
+
+        process.stdout.moveCursor(-5, -1);
+        process.stdout.clearLine();
+
+        var expected = [goodLines[0], goodLines[2]].join('\n');
+        expect(mockConsole.getConsoleOutput()).to.equal(expected)
+    });
+
+    it('handles simulating window resizing', function () {
+        expect(process.stdout.windowSize()).to.deep.equal([100, 100]);
+        mockConsole.setWindowSize(200, 200);
+        expect(process.stdout.windowSize()).to.deep.equal([200, 200]);
+    });
+
     describe('moving the cursor pos', function () {
 
         var cases = [
@@ -91,6 +107,5 @@ describe('mock-console tests', function () {
         process.stdout.write('* abcdefg');
         expect(mockConsole.getConsoleOutput()).to.equal('');
     });
-
 
 });

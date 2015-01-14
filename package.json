@@ -21,7 +21,6 @@
   "keywords": [],
   "devDependencies": {
     "jshint": "^2.5.11",
-    "auto-istanbul": "0.0.3",
     "mocha": "^2.1.0",
     "chai": "^1.10.0"
   }
