@@ -1,5 +1,7 @@
 # mock-console
 
+**TODO Clean up code, functions, absolute move cursor function and tests.**
+
 Node module for mocking the process.stdout variable to test program console output.
 
 ## Getting Started
@@ -34,7 +36,8 @@ Currently supported:
 * process.stdout.write
 * process.stdout.moveCursor
 * process.stdout.clearScreenDown
-
+* process.stdout.clearLine
+* process.stdout.windowSize
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using make or make lint and make test
