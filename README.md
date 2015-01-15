@@ -8,10 +8,7 @@ Install the module with: `npm install mock-console`
 ```javascript
 // Takes a regex as an argument. This is used to deliniate between lines that are test framework based.
 // Future builds will have mocha keywords built in, but for now you'll have to handle this yourself.
-var mockConsole = require('mock-console')(/^\*/);
-
-// Width, Height
-mockConsole.setWindowSize(100, 200);
+var mockConsole = require('mock-console')(/^\*/, { width: 100, height: 100 });
 
 process.stdout.write('* This is some text');
 process.stdout.write('* and some more');

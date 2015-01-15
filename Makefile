@@ -7,9 +7,9 @@ JSHINT = ./node_modules/.bin/jshint
 main: lint test
 
 test:
-	@NODE_ENV=test ./node_modules/.bin/mocha \
-		--reporter $(REPORTER)
+	@NODE_ENV=test ./node_modules/.bin/mocha
 
 lint:
-	$(JSHINT) ./lib --config $(BASE)/.jshintrc && \
-	$(JSHINT) ./test --config $(BASE)/.jshintrc
+	$(JSHINT) ./lib --config $(BASE)/.jshintrc
+
+.PHONY: test
