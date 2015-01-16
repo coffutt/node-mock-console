@@ -11,11 +11,11 @@ Install the module with: `npm install mock-console`
 var mockConsole = require('mock-console')(/^\*/, { width: 100, height: 100 });
 
 process.stdout.write('* This is some text');
-process.stdout.write('* and some more');
+process.stdout.write('* and some more\n');
 process.stdout.write('* and another line');
 process.stdout.write('$THIS LINE DOESNT MATCH'); // Won't be cached
 
-assert.equals(mockConsole.getConsoleOuput(), '* This is some text\n* and some more\n* and another line');
+assert.equals(mockConsole.getConsoleOuput(), '* This is some text* and some more\n* and another line');
 process.stdout.clearLine();
 process.stdout.moveCursor(0, -1);
 process.stdout.clearScreenDown();
