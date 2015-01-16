@@ -1,8 +1,6 @@
 # mock-console
 
-**TODO Clean up code, functions, absolute move cursor function and tests.**
-
-Node module for mocking the process.stdout variable to test program console output.
+Node module for mocking the process.stdout variable to test program console output. This is still a prototype and any integration should be carefully tested.
 
 ## Getting Started
 Install the module with: `npm install mock-console`
@@ -44,7 +42,3 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## License
 Copyright (c) 2015 Craig Offutt. Licensed under the MIT license.
-
-## TODO
-
-Further evaluate the accuracy of cursor positions in the moveCursor calls and after clear lines. This is still a prototype and any integration should be carefully tested.
